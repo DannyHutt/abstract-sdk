@@ -185,7 +185,7 @@ export default class AbstractAPI implements AbstractInterface {
             meta: newMeta
           };
         }
-      ).promise;
+      );
     },
     info: async ({ activityId }: ActivityDescriptor) => {
       const response = await this.fetch(`activities/${activityId}`);
@@ -315,7 +315,7 @@ export default class AbstractAPI implements AbstractInterface {
           const response = await this.fetch(`comments?${query}`);
           return await response.json();
         }
-      ).promise;
+      );
     },
     info: async ({ commentId }: CommentDescriptor) => {
       const response = await this.fetch(`comments/${commentId}`);
@@ -565,7 +565,7 @@ export default class AbstractAPI implements AbstractInterface {
           const response = await this.fetch(`notifications?${query}`);
           return await response.json();
         }
-      ).promise;
+      );
     },
     info: async ({ notificationId }: NotificationDescriptor) => {
       const response = await this.fetch(`notifications/${notificationId}`);
